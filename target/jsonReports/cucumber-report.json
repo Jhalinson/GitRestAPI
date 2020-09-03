@@ -1,0 +1,183 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24004043200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeScenario()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Verify is Place is being successfuly added using AddPlaceAPI",
+        "description": "",
+        "id": "validating-place-api\u0027s;verify-is-place-is-being-successfuly-added-using-addplaceapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 434880800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Add place payload with \"Jhalinson\" \"English\" \"Street Ramon Vidarl #54, Prado Oriental\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Jhalinson",
+                  "offset": 24
+                },
+                {
+                  "val": "English",
+                  "offset": 36
+                },
+                {
+                  "val": "Street Ramon Vidarl #54, Prado Oriental",
+                  "offset": 46
+                }
+              ],
+              "location": "PlaceStepDefinition.add_place_payload_with(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1492135600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User calls \"AddPlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AddPlaceAPI",
+                  "offset": 12
+                },
+                {
+                  "val": "POST",
+                  "offset": 31
+                }
+              ],
+              "location": "PlaceStepDefinition.user_calls_with_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3117400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The API call us success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 41
+                }
+              ],
+              "location": "PlaceStepDefinition.the_API_call_us_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 38684600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 1
+                },
+                {
+                  "val": "OK",
+                  "offset": 30
+                }
+              ],
+              "location": "PlaceStepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21994200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "scope",
+                  "offset": 1
+                },
+                {
+                  "val": "APP",
+                  "offset": 29
+                }
+              ],
+              "location": "PlaceStepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2785765900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify place_id created maps to \"Jhalinson\" using \"GetPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Jhalinson",
+                  "offset": 33
+                },
+                {
+                  "val": "GetPlaceAPI",
+                  "offset": 51
+                }
+              ],
+              "location": "PlaceStepDefinition.verify_place_id_created_maps_to_using(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@AddPlace"
+          },
+          {
+            "line": 2,
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api\u0027s",
+    "keyword": "Feature",
+    "uri": "placeValidations.feature"
+  }
+]
